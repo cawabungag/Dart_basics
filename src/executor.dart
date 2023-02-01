@@ -1,6 +1,7 @@
 import 'FindNumbersInString.dart';
 import 'IntegerConverter.dart';
 import 'NODNOKCalculator.dart';
+import 'NumbersReader.dart';
 import 'WordsMapper.dart';
 
 void main() {
@@ -8,6 +9,7 @@ void main() {
   convertInteger();
   findNumbersInString();
   wordsMap();
+  readNumbers();
 }
 
 void calculateNodNok() {
@@ -39,4 +41,12 @@ void wordsMap(){
   final List<String> words = ["one", "two", "two", "three", "three", "three"];
   var mapperWords = wordsMapper.GetWordsCount(words);
   print("${mapperWords}");
+}
+
+
+void readNumbers() {
+  var reader = new NumbersReader();
+  final List<String> words = ["one", "two", "two", "three", "three", "three", "four", "nine", "dog", "cat"];
+  var numbers = reader.ReadNumbersFromString(words);
+  print("${numbers}");
 }
