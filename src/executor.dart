@@ -2,6 +2,7 @@ import 'FindNumbersInString.dart';
 import 'IntegerConverter.dart';
 import 'NODNOKCalculator.dart';
 import 'NumbersReader.dart';
+import 'Vector3Math.dart';
 import 'WordsMapper.dart';
 
 void main() {
@@ -10,6 +11,7 @@ void main() {
   findNumbersInString();
   wordsMap();
   readNumbers();
+  some3DMath();
 }
 
 void calculateNodNok() {
@@ -36,17 +38,26 @@ void findNumbersInString() {
   print("${numbers}");
 }
 
-void wordsMap(){
+void wordsMap() {
   var wordsMapper = new WordsMapper();
   final List<String> words = ["one", "two", "two", "three", "three", "three"];
   var mapperWords = wordsMapper.GetWordsCount(words);
   print("${mapperWords}");
 }
 
-
 void readNumbers() {
   var reader = new NumbersReader();
   final List<String> words = ["one", "two", "two", "three", "three", "three", "four", "nine", "dog", "cat"];
   var numbers = reader.ReadNumbersFromString(words);
   print("${numbers}");
+}
+
+void some3DMath() {
+  var math = new VectorMath();
+  var distance = math.CalculateDistance(Point.one(), Point.zero());
+  print("${distance}");
+
+  var areaOfTriangle =
+      math.CalculateAreaOfTrinagle(Point.one(), Point.zero(), Point.random());
+  print("${areaOfTriangle}");
 }
