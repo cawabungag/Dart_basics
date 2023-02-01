@@ -1,11 +1,13 @@
 import 'FindNumbersInString.dart';
 import 'IntegerConverter.dart';
 import 'NODNOKCalculator.dart';
+import 'WordsMapper.dart';
 
 void main() {
   calculateNodNok();
   convertInteger();
   findNumbersInString();
+  wordsMap();
 }
 
 void calculateNodNok() {
@@ -22,11 +24,7 @@ void convertInteger() {
   var input = 1970;
   var binaryInput = integerConverter.decimalToBinary(input);
   var binaryToDecimal = integerConverter.binaryToDecimal(binaryInput);
-  if (binaryToDecimal != input) {
-    print("something went wrong!");
-  } else {
-    print("binaryToDecimal: ${binaryToDecimal}");
-  }
+  print("binaryToDecimal: ${binaryToDecimal}");
 }
 
 void findNumbersInString() {
@@ -34,4 +32,11 @@ void findNumbersInString() {
   var findInNumber = new FindNumbersInString();
   var numbers = findInNumber.FindNums(string);
   print("${numbers}");
+}
+
+void wordsMap(){
+  var wordsMapper = new WordsMapper();
+  final List<String> words = ["one", "two", "two", "three", "three", "three"];
+  var mapperWords = wordsMapper.GetWordsCount(words);
+  print("${mapperWords}");
 }
