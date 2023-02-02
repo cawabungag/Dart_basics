@@ -5,6 +5,7 @@ import 'NODNOKCalculator.dart';
 import 'NumbersReader.dart';
 import 'Vector3Math.dart';
 import 'WordsMapper.dart';
+import 'Mail.dart';
 
 void main() {
   calculateNodNok();
@@ -14,6 +15,7 @@ void main() {
   readNumbers();
   some3DMath();
   findingTheRoot();
+  checkMail();
 }
 
 void calculateNodNok() {
@@ -49,7 +51,18 @@ void wordsMap() {
 
 void readNumbers() {
   var reader = new NumbersReader();
-  final List<String> words = ["one", "two", "two", "three", "three", "three", "four", "nine", "dog", "cat"];
+  final List<String> words = [
+    "one",
+    "two",
+    "two",
+    "three",
+    "three",
+    "three",
+    "four",
+    "nine",
+    "dog",
+    "cat"
+  ];
   var numbers = reader.ReadNumbersFromString(words);
   print("${numbers}");
 }
@@ -69,3 +82,17 @@ void findingTheRoot() {
   print("${root}");
 }
 
+void checkMail() {
+  var userManager = new UserManager();
+  var user = new GeneralUser("123@gmail.com");
+  var admin = new AdminUser("321@cloud.com");
+
+  print("before delete:");
+  userManager.postUser(user);
+  userManager.postUser(admin);
+  userManager.logUsers();
+
+  print("after delete:");
+  userManager.deleteUser(user);
+  userManager.logUsers();
+}
