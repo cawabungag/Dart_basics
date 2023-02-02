@@ -1,4 +1,5 @@
 import 'FindNumbersInString.dart';
+import 'FindingTheRootOfDegree.dart';
 import 'IntegerConverter.dart';
 import 'NODNOKCalculator.dart';
 import 'NumbersReader.dart';
@@ -12,6 +13,7 @@ void main() {
   wordsMap();
   readNumbers();
   some3DMath();
+  findingTheRoot();
 }
 
 void calculateNodNok() {
@@ -61,3 +63,9 @@ void some3DMath() {
       math.CalculateAreaOfTrinagle(Point.one(), Point.zero(), Point.random());
   print("${areaOfTriangle}");
 }
+
+void findingTheRoot() {
+  var root = 10.FindRoot(5);
+  print("${root}");
+}
+
