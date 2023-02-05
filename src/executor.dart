@@ -82,8 +82,8 @@ void some3DMath() {
 }
 
 void findingTheRoot() {
-  var root = 10.findRoot(5);
-  print("${root}");
+  var root = 34.find_root(5);
+  print("root: ${root}");
 }
 
 void checkMail() {
