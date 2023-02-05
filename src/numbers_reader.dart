@@ -12,7 +12,7 @@ class NumbersReader {
     'nine': 9
   };
 
-  List<int> ReadNumbersFromString(List<String> words) {
+  List<int> readNumbersFromString(List<String> words) {
     final List<int> buffer = <int>[];
     for (var i = 0; i < words.length; i++) {
       var word = words[i];

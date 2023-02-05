@@ -1,5 +1,5 @@
 extension FindRootOfNDdegree on num {
-  num FindRoot(num root) {
+  num findRoot(num root) {
     var eps = 0.00001;
     var num = this;
 

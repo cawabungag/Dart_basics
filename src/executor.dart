@@ -1,11 +1,11 @@
-import 'FindNumbersInString.dart';
-import 'FindingTheRootOfDegree.dart';
-import 'IntegerConverter.dart';
-import 'NODNOKCalculator.dart';
-import 'NumbersReader.dart';
-import 'Vector3Math.dart';
-import 'WordsMapper.dart';
-import 'Mail.dart';
+import 'mail.dart';
+import 'find_numbers_in_string.dart';
+import 'finding_the_root_of_degree.dart';
+import 'integer_converter.dart';
+import 'nodnok_calculator.dart';
+import 'numbers_reader.dart';
+import 'vector_3_math.dart';
+import 'words_mapper.dart';
 
 void main() {
   calculateNodNok();
@@ -19,11 +19,11 @@ void main() {
 }
 
 void calculateNodNok() {
-  var nodNok = new NODNOKCalculator();
+  var nodNok = new NodNokCalculator();
   double a = 1970;
   double b = 1;
-  var nod = nodNok.NOD(a, b);
-  var nok = nodNok.NOK(a, b);
+  var nod = nodNok.nod(a, b);
+  var nok = nodNok.nok(a, b);
   print("nod: ${nod} nok: ${nok}");
 }
 
@@ -38,7 +38,7 @@ void convertInteger() {
 void findNumbersInString() {
   var string = "0 1 2 3 4 5 6 7 8 9";
   var findInNumber = new FindNumbersInString();
-  var numbers = findInNumber.FindNums(string);
+  var numbers = findInNumber.findNums(string);
   print("${numbers}");
 }
 
@@ -63,7 +63,7 @@ void readNumbers() {
     "dog",
     "cat"
   ];
-  var numbers = reader.ReadNumbersFromString(words);
+  var numbers = reader.readNumbersFromString(words);
   print("${numbers}");
 }
 
@@ -78,7 +78,7 @@ void some3DMath() {
 }
 
 void findingTheRoot() {
-  var root = 10.FindRoot(5);
+  var root = 10.findRoot(5);
   print("${root}");
 }
 

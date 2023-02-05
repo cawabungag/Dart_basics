@@ -1,5 +1,5 @@
 class FindNumbersInString {
-  List<num> FindNums(String string) {
+  List<num> findNums(String string) {
     final List<num> numsBuffer = [];
     List<String> numsList = string.split(" ");
     for (int i = 0; i < numsList.length; i++) {
