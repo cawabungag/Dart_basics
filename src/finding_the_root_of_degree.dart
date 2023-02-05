@@ -1,5 +1,5 @@
 extension FindRootOfNDegree on num {
-  num find_root(double root) {
+  num findRoot(double root) {
     double eps = 0.000000001;
     double result = this.toDouble();
     double x = this / root;

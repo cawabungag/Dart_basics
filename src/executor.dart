@@ -82,7 +82,7 @@ void some3DMath() {
 }
 
 void findingTheRoot() {
-  var root = 34.find_root(5);
+  var root = 34.findRoot(5);
   print("root: ${root}");
 }
 
