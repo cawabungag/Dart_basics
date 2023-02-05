@@ -27,7 +27,7 @@ void calculateNodNok() {
   print("nod: ${nod} nok: ${nok}");
 
   var c = 2048;
-  var primeFactorsOfC = nodNok.find_prime_factors(c);
+  var primeFactorsOfC = nodNok.findPrimeFactors(c);
   print("prime factors of ${c}: ${primeFactorsOfC}");
 }
 
@@ -49,7 +49,7 @@ void findNumbersInString() {
 void wordsMap() {
   var wordsMapper = new WordsMapper();
   final List<String> words = ["one", "two", "two", "three", "three", "three"];
-  var mapperWords = wordsMapper.GetWordsCount(words);
+  var mapperWords = wordsMapper.getWordsCount(words);
   print("${mapperWords}");
 }
 

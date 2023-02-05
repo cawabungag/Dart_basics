@@ -14,7 +14,7 @@ class NodNokCalculator {
     return ((a * b) / nod(a, b)).abs();
   }
 
-  List<int> find_prime_factors(int number) {
+  List<int> findPrimeFactors(int number) {
     if (number < 2) return [];
     int factor = 2;
     List<int> lstFactors = [];
