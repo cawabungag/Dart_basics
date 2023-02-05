@@ -1,13 +1,13 @@
 import 'dart:math' as math;
 
 class VectorMath {
-  double CalculateDistance(Point a, Point b) {
+  double calculateDistance(Point a, Point b) {
     var diff = b - a;
     var dotProduct = Dot(diff, diff);
     return math.sqrt(dotProduct);
   }
 
-  double CalculateAreaOfTrinagle(Point a, Point b, Point c) {
+  double calculateAreaOfTrinagle(Point a, Point b, Point c) {
     double res = math.pow(
         ((b.X * a.Y) -
             (c.X * a.Y) -
@@ -61,7 +61,8 @@ class Point {
 
   factory Point.random() {
     var random = new math.Random();
-    return new Point(random.nextDouble(), random.nextDouble(), random.nextDouble());
+    return new Point(
+        random.nextDouble(), random.nextDouble(), random.nextDouble());
   }
 
   Point operator -(Point b) {

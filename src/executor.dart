@@ -69,11 +69,11 @@ void readNumbers() {
 
 void some3DMath() {
   var math = new VectorMath();
-  var distance = math.CalculateDistance(Point.one(), Point.zero());
+  var distance = math.calculateDistance(Point.one(), Point.zero());
   print("${distance}");
 
   var areaOfTriangle =
-      math.CalculateAreaOfTrinagle(Point.one(), Point.zero(), Point.random());
+      math.calculateAreaOfTrinagle(Point.one(), Point.zero(), Point.random());
   print("${areaOfTriangle}");
 }
 
