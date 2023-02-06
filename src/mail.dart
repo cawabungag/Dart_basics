@@ -15,13 +15,13 @@ class GeneralUser extends User {
 }
 
 class UserManager<T extends User> {
-  final List<User> users = <User>[];
+  final List<T> users = <T>[];
 
-  void postUser(User user) {
+  void postUser(T user) {
     users.add(user);
   }
 
-  void deleteUser(User user) {
+  void deleteUser(T user) {
     users.remove(user);
   }
 

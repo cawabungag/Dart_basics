@@ -20,8 +20,8 @@ void main() {
 
 void calculateNodNok() {
   var nodNok = new NodNokCalculator();
-  double a = 1024;
-  double b = 1024;
+  int a = 1024;
+  int b = 1024;
   var nod = nodNok.nod(a, b);
   var nok = nodNok.nok(a, b);
   print("nod: ${nod} nok: ${nok}");

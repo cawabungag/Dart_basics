@@ -1,17 +1,17 @@
 class NodNokCalculator {
-  double nod(double a, double b) {
+  int nod(int a, int b) {
     if (b < 0) b = -b;
     if (a < 0) a = -a;
     while (b > 0) {
-      double temp = b;
+      double temp = b.toDouble();
       b = a % b;
-      a = temp;
+      a = temp.toInt();
     }
     return a;
   }
 
-  double nok(double a, double b) {
-    return ((a * b) / nod(a, b)).abs();
+  int nok(int a, int b) {
+    return (((a * b) / nod(a, b)).abs()).toInt();
   }
 
   List<int> findPrimeFactors(int number) {
